@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test JQuery</title>
+    <!-- css -->
+    <style>
+      #boxes_wrap {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Belajar JQuery</h1>
+    <div id="box1">Box 1</div>
+
+    <div id="boxes_wrap">
+      <div class="boxes">Baris pertama</div>
+      <div class="boxes">Baris kedua</div>
+      <div class="boxes">Baris kedua koma lima</div>
+      <div class="boxes">Baris ketiga</div>
+    </div>
+
+    <form>
+      <input type="text" id="inputText" />
+      <input type="submit" />
+    </form>
+
+    <!-- js -->
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 01 - menambah dan menghapus elemen
+
+        // append prepend | after before
+        // $('#boxes_wrap').append('<h1>Halo</h1>');  //muncul di dalam
+        // $('#boxes_wrap').prepend('<h1>Halo</h1>'); //muncul di dalam
+
+        // $('#boxes_wrap').after('<h1>Halo</h1>');  // muncul di luar
+        $('#boxes_wrap').before('<h1>Halo</h1>'); //muncul di luar
+
+        // remove and empty
+        $('#boxes_wrap').empty(); //masih bisa melihat kontentnya
+        // $('#boxes_wrap').remove()  //semua hilang
+      });
+    </script>
+  </body>
+</html>

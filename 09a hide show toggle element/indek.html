@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test JQuery</title>
+    <!-- css -->
+    <style>
+      #boxes_wrap {
+        color: red;
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="change">Belajar JQuery</h1>
+    <div id="box1">Box 1</div>
+
+    <div id="boxes_wrap">
+      <div class="boxes">Baris pertama</div>
+      <div class="boxes">Baris kedua</div>
+      <div class="boxes">Baris kedua koma lima</div>
+      <div class="boxes">Baris ketiga</div>
+    </div>
+
+    <button id="btn1">SHOW</button>
+    <button id="btn2">HIDE</button>
+    <button id="btn3">TOGGLE</button>
+
+    <!-- js -->
+    <script src="jquery.js"></script>
+    <script>
+      // --- show - hide - toggle
+      $(document).ready(function () {
+        // $('#btn1').click(function () {
+        //   $('#boxes_wrap').show();
+        // });
+        // $('#btn2').click(function () {
+        //   $('#boxes_wrap').hide();
+        // });
+        // $('#btn3').click(function () {
+        //   $('#boxes_wrap').toggle();
+        // });
+
+        // fadeIn -- fadeOut -- fadeTo(time, opacity) -- fadetoggle
+        // $('#btn1').click(function () {
+        //   $('#boxes_wrap').fadeIn(2000);
+        // });
+        // $('#btn2').click(function () {
+        //   $('#boxes_wrap').fadeOut(2000);
+        // });
+        // $('#btn3').click(function () {
+        //   $('#boxes_wrap').fadeTo(2000, 0.5);
+        // });
+
+        // slideUp -- slideDown -- slideToggle
+        $('#btn1').click(function () {
+          $('#boxes_wrap').slideDown(2000);
+        });
+        $('#btn2').click(function () {
+          $('#boxes_wrap').slideUp(2000);
+        });
+        $('#btn3').click(function () {
+          $('#boxes_wrap').slideToggle(2000);
+        });
+      });
+    </script>
+  </body>
+</html>
